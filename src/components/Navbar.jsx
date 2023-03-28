@@ -11,7 +11,7 @@ function Navbar() {
                 </li>
                 <div className={nav.elementswrapper}>
                         <li className={nav.navelements}>
-                            <a href="#">home</a>
+                            <a href="#">home</a> 
                         </li>
                         <li className={nav.navelements}>
                             <a href="#"> category</a>

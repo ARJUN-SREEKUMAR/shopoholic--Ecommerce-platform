@@ -44,7 +44,7 @@
         "/Users/arjuns/Developer/web/shopoholic/shop/src/components/loginpic.png");
     background-repeat:no-repeat;
     background-size: 100%;
-    flex: 1;
+      flex:1;
     position: relative;
   }
   
@@ -118,6 +118,22 @@
     font-family: "Raleway", sans-serif;
   }
 
+  .text-sub-wrong{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  margin-top: -50px;
+    color: rgba(255, 0, 0, 0.762);
+    float: left;
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0, 11%, 22%),
+      0 0 0.45em red;
+    -moz-text-shadow: 0 0 0.125em hsl(0, 7%, 38%),
+      0 0 0.45em red;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 10s linear infinite;
+    font-family: "Raleway", sans-serif;
+  }
+
 
 
 
@@ -125,7 +141,7 @@
    gap: 170px;
    display: flex;
    margin-top: -30px;
-   
+   cursor:pointer;
   }
   .f-btn{
     text-decoration: none;
@@ -222,11 +238,6 @@
   
   .form-control {
      width: 100%;
-    /* border: 1px solid rgba(31, 110, 150, 0.2);
-    border-radius: 4px;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    box-shadow: 0px 5px 3px rgba(16, 84, 108, 0.5);  */
     position: relative;
     color: var(--glow-color);
     cursor: pointer;
@@ -251,6 +262,39 @@
     animation: border-flicker 10s linear infinite;
     
   }
+            /*when email or password is wrong*/
+
+  .form-control-wrong {
+    width: 100%;
+   position: relative;
+   color: red;
+   cursor: pointer;
+   padding: 0.35em 1em;
+   border: 0.15em solid var(--glow-color);
+   border-radius: 0.45em;
+   background: none;
+   /* perspective: 2em; */
+   font-family: "Raleway", sans-serif;
+   font-size: 1.4em;
+   font-weight: 900;
+   letter-spacing: 0em;
+   left: 00px;
+   top:-1px;
+ 
+   -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+     0px 0px 0.5em 0px var(--glow-color);
+   -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+     0px 0px 0.5em 0px red;
+   box-shadow: inset 0px 0px 0.5em 0px red,
+     0px 0px 0.5em 0px var(--glow-color);
+   animation: border-flicker .1s linear infinite;
+   
+ }
+
+
+
+
+
   ::placeholder{
     color: var(--glow-color);
     background: none;
