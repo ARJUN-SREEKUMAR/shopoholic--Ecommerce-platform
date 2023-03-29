@@ -1,0 +1,30 @@
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+.homeIntro{
+    font-size: 62px;
+    padding: 300px 00px 200px 530px;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 10px;
+    color: var(--glow-color);
+
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsla(180, 1%, 48%, 0.3),
+      0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsla(180, 2%, 25%, 0.3),
+      0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsla(180, 1%, 45%, 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker .4s linear infinite;
+    
+}
+.bannerDiv{
+    
+    background-color: black;
+    margin-top: 90px;
+    height: 100vh;
+    
+}
+
+
+:root {
+    --glow-color: #5e69de;
+}

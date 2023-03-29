@@ -1,11 +1,12 @@
 
 import React from 'react'
 import Navbar from './Navbar'
-import './Login.css'
+import log from './Login.module.css'
 import { useState } from 'react';
 import {getAuth,signInWithEmailAndPassword,sendPasswordResetEmail} from 'firebase/auth'
 import app from '././firebase/Firebase'
 import {  signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
 
 //importing custom alerts
 
@@ -16,7 +17,9 @@ const auth=getAuth(app);
 
 function Login() {
 
-  
+  let navigate = useNavigate();
+
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [formClass, setformClass] = useState(true)
@@ -33,6 +36,7 @@ function Login() {
     alert("Login sucessfull");
     console.log("Login sucessfull");
     // ...
+    navigate('/');
     setformClass(true);
   })
   .catch((error) => {
@@ -46,45 +50,49 @@ function Login() {
      
   }
   
-  // let classForm = 'form-control';
-  // classForm = 'form-control-wrong';
+  // let classForm = 'formcontrol';
+  // classForm = 'formcontrolwrong';
   return (
-    <div className='login-wrapper'>
+    <div className={log.loginwrapper}>
       <Navbar />
-      <div className="login-components">
-        <div className="left-half">
+      <div className={log.logincomponents}>
+        <div className={log.lefthalf}>
           {/* <div className="gradient"></div> */}
          
         </div>
-        <div className="right-half">
+        <div className={log.righthalf}>
         {/* <div className="gradient"></div> */}
-        <p className='text-main'>Welcome Back..!</p>
+        <p className={log.textmain}>Welcome Back..!</p>
           
-          <p className={formClass?"text-sub":"text-sub-wrong"}>{formClass?"Please enter your credentials below":"Please check your Login credentials"}</p>
+          <p className={formClass?"textsub":"textsubwrong"}>{formClass?"Please enter your credentials below":"Please check your Login credentials"}</p>
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div className={log.formgroup}>
               <input
                 type="email"
                 id="username"
                 value={username}
                 onChange={(event) => setUsername(event.target.value)}
-                className={formClass?"form-control":"form-control-wrong"}
+                className={formClass?log.formcontrol:log.formcontrolwrong}
                 placeholder="Email"
               />
             </div>
-            <div className="form-group">
+            <div className={log.formgroup}>
               <input
                 type="password"
                 id="password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
-                className={formClass?"form-control":"form-control-wrong"}
+                className={formClass?log.formcontrol:log.formcontrolwrong}
                 placeholder="Password"
               />
               <br></br><br></br><br></br><br></br>
-              <div className='extra-features'>
-                         <button className='f-btn'>don't have an account?</button> 
-                         <div class="google-btn" onClick={()=>{
+              <div className={log.extrafeatures}>
+                         <button className={log.fbtn} onClick={
+                          ()=> {
+                          navigate('/signup');
+                          }
+                         }>don't have an account?</button> 
+                         <div class={log.googlebtn} onClick={()=>{
                                                       ///////////google authentication
                                       const auth = getAuth();
                                       signInWithPopup(auth, provider)
@@ -92,7 +100,7 @@ function Login() {
                                           // This gives you a Google Access Token. You can use it to access the Google API.
                                           const credential = GoogleAuthProvider.credentialFromResult(result);
                                           const token = credential.accessToken;
-                                          // The signed-in user info.
+                                          // The signedin user info.
                                           const user = result.user;
                                           // IdP data available using getAdditionalUserInfo(result)
                                           // ...
@@ -107,13 +115,13 @@ function Login() {
                                           // ...
                                         });}
                                     }  >
-                                    <div class="google-icon-wrapper">
-                                      <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                                    <div class={log.googleiconwrapper}>
+                                      <img class={log.googleicon} src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                                     </div>
-                                    <p class="btn-text" 
+                                    <p class={log.btntext} 
                                     ><b>Sign in with google</b></p>
                                   </div>
-                         <button className='f-btn' onClick={()=>{
+                         <button className={log.fbtn} onClick={()=>{
                             sendPasswordResetEmail(auth, username)
                             .then(() => {
                               // Password reset email sent!
@@ -134,7 +142,7 @@ function Login() {
                          }}>forgot password?</button>  
                          </div>
             </div>
-            <button class='glowing-btn'><span class='glowing-txt'>L<span class='faulty-letter'>O</span>GIN</span></button>
+            <button class={log.glowingbtn}><span class={log.glowingtxt}>L<span class={log.faultyletter}>O</span>GIN</span></button>
           </form>
           
         </div>
