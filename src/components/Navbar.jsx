@@ -1,33 +1,86 @@
 import React from 'react'
 import nav  from './Navbar.module.css';
 import { Icon } from '@iconify/react';
+import { logincontext } from './global/contex'; // usecontext 
+import { useContext , useState,useEffect} from 'react'; //usecontext
+import { useNavigate ,Link } from 'react-router-dom';
+
 function Navbar() {
+    // const [rend, setrend] = useState()
+    // setrend(1)
+    // useEffect(() => {
+       
+    //   }, [rend]);
+    
+
+    let navigate = useNavigate();
+    // let pic=islogin.photoURL;
+    const lockbuttonnavigate=()=>{
+        if (islogin) {
+            
+        }
+        else
+        navigate('/login');
+    }
+    const getAvatar = (displayName) => { /// object.display name is passed as parameter
+        if (displayName == null) {
+            return null; 
+          }
+        const initials = displayName.split(" ").map((word) => word[0]).join("");
+        return `https://ui-avatars.com/api/?name=${initials}`;
+      };
+
+
+
+    const {islogin,setislogin}=useContext(logincontext) // use contex useage from app.js
   return (
     <div>
         <div className={nav.navbar}> 
             <ul>
                 <li className={nav.title}>
-                   <a href="#">Shopoholic..</a> 
+                <Link to="/">Shopoholic..</Link> 
                 </li>
                 <div className={nav.elementswrapper}>
                         <li className={nav.navelements}>
-                            <a href="#">home</a>
+                            <Link to="/">home</Link> 
                         </li>
                         <li className={nav.navelements}>
-                            <a href="#"> category</a>
+                
+                            <Link to="/">category</Link> 
                         </li>
                         <li className={nav.navelements}>
-                            <a href="#">  new arrivals</a>
+                    
+                            <Link to="/">new arrivals</Link> 
                         </li>
                         <li className={nav.navelements}>
-                            <a href="#">offers</a>
+            
+                            <Link to="/">offers</Link> 
                         </li>
+                        
                 </div>
                 <div className={nav.searchbox}>
-                     <button className={nav.btnsearch}><Icon icon='material-symbols:search' /></button>
+                    
                       < input type='text' className={nav.inputsearch} placeholder='Search something...' />
-                      
-                </div>
+                      </div>
+                      <button className={nav.btnsearch}><Icon icon='material-symbols:search' /></button>    
+                            
+                     <button className={nav.loginicon} onClick={lockbuttonnavigate}> 
+                     { islogin? ( islogin.photoURL ? (
+                                            <img className={nav.avatar} src={islogin.photoURL} alt="Image" />
+                                        )
+                                        :
+                                        (
+                                            <img className={nav.avatar} src={getAvatar(islogin.displayName)} alt="Image" /> 
+                                        )
+                                 
+                                 )
+                                 :
+                                (
+                                 <Icon icon="streamline:interface-lock-combination-combo-lock-locked-padlock-secure-security-shield-keyhole" />
+                                )
+                      }
+     </button>
+                    
             </ul>
         </div>
     </div>

@@ -1,0 +1,505 @@
+
+.login-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    flex-wrap: wrap
+  }
+  
+  .login-components {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    top: 6rem;
+  }
+  
+  .left-half {
+    /* background-image: linear-gradient(to bottom, #000000, #153556); */
+    background-image: url(
+        "/Users/arjuns/Developer/web/shopoholic/shop/src/components/signup.jpg");
+    background-repeat:no-repeat;
+    background-size: 100% ;
+      flex:1;
+    position: relative;
+  }
+  
+  .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+  }
+  
+  .right-half {
+    background-color: white;
+    background-image: linear-gradient(to bottom, hsl(240, 31%, 10%), hsl(0, 0%, 0%));
+    color: black;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .text-main {
+    /* font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 0rem;
+    color: white;
+    text-align: center;
+    margin-top:   -50px;
+    font-family: 'Kalam', cursive; */
+    position: relative;
+    text-align: center;
+    color: var(--glow-color);
+    cursor: pointer;
+    padding: 0.35em 1em;
+    /* border: 0.15em solid var(--glow-color); */
+    border-radius: 0.45em;
+    background: none;
+    perspective: 2em;
+    font-family: "Raleway", sans-serif;
+    font-size: 3.5em;
+    font-weight: 4000;
+    letter-spacing: 0.3em;
+    left: 10px;
+  
+    -webkit-text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 10s linear infinite;
+    animation: border-flicker 10s linear infinite;
+
+  }
+  
+  .text-sub {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  margin-top: -50px;
+    color: var(--glow-color);
+    float: left;
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+      0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+      0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 10s linear infinite;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .text-sub-wrong{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  margin-top: -50px;
+    color: rgba(255, 0, 0, 0.762);
+    float: left;
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0, 11%, 22%),
+      0 0 0.45em red;
+    -moz-text-shadow: 0 0 0.125em hsl(0, 7%, 38%),
+      0 0 0.45em red;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 10s linear infinite;
+    font-family: "Raleway", sans-serif;
+  }
+
+
+
+
+  .extra-features{           
+   gap: 170px;
+   display: flex;
+   margin-top: -30px;
+   cursor:pointer;
+  }
+  .f-btn{
+    text-decoration: none;
+    background: none;
+    color: var(--glow-color);
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 10s linear infinite;
+  font-family: "Raleway", sans-serif;
+  border: 0px;
+  }
+  .f-btn1{
+    display: none;
+  }
+
+
+.google-btn {
+  width: 184px;
+  height: 40px;
+  /* background-color: var(--glow-color); */
+  background: none;
+  color:var(--glow-color);
+  border-radius: 2px;
+  border-style:outset;
+  border-color: var(--glow-color);
+  border-width: 1px;
+  box-shadow: 0 3px 4px 0 --glow-color;
+}
+  .google-icon-wrapper {
+    position: absolute;
+    margin-top: -1px;
+    margin-left: -40px;
+    width: 40px;
+    padding:auto;
+    height: 40px;
+    border-radius: 2px;
+    /* background-color: var(--glow-color); */
+    background: none;
+    border: 1px;
+    border-style:outset;
+    border-color: var(--glow-color);
+  }
+  .google-icon {
+    position: absolute;
+    /* background-image: url('/Users/arjuns/Developer/web/shopoholic/shop/src/components/download.png'); */
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+  .btn-text {
+    float: right;
+    margin: 11px 29px 0 0;
+    align-items: center;
+    color: --white;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.1), 0 0 0.03em var(--glow-color);
+  animation: text-flicker 10s linear infinite;
+  font-family: "Raleway", sans-serif;
+  border: 0px;
+  }
+  .google-btn:hover {
+    box-shadow: 0 0 6px var(--google-blue);
+  }
+  .google-icon-wrapper:hover {
+    box-shadow: 0 0 6px var(--google-blue);
+  }
+  .google-btn:active,.google-icon-wrapper:active {
+    background: var(--glow-color);
+    color: #fff;
+  }
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+
+
+
+
+  .form-group {
+    margin-bottom: 2rem;
+     width: 700px; 
+    
+    
+    
+    
+  }
+  
+  .form-control {
+     width: 100%;
+    position: relative;
+    color: var(--glow-color);
+    cursor: pointer;
+    padding: 0.35em 1em;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: none;
+    /* perspective: 2em; */
+    font-family: "Raleway", sans-serif;
+    font-size: 1.4em;
+    font-weight: 900;
+    letter-spacing: 0em;
+    left: 00px;
+    top:-1px;
+  
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 10s linear infinite;
+    
+  }
+            /*when email or password is wrong*/
+
+  .form-control-wrong {
+    width: 100%;
+   position: relative;
+   color: red;
+   cursor: pointer;
+   padding: 0.35em 1em;
+   border: 0.15em solid var(--glow-color);
+   border-radius: 0.45em;
+   background: none;
+   /* perspective: 2em; */
+   font-family: "Raleway", sans-serif;
+   font-size: 1.4em;
+   font-weight: 900;
+   letter-spacing: 0em;
+   left: 00px;
+   top:-1px;
+ 
+   -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+     0px 0px 0.5em 0px var(--glow-color);
+   -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+     0px 0px 0.5em 0px red;
+   box-shadow: inset 0px 0px 0.5em 0px red,
+     0px 0px 0.5em 0px var(--glow-color);
+   animation: border-flicker .1s linear infinite;
+   
+ }
+
+
+
+
+
+  ::placeholder{
+    color: var(--glow-color);
+    background: none;
+  }
+ 
+
+  /* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button */
+  /* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button */
+  /* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button */  
+ /* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button *//* glowing button */
+ @import url("https://fonts.googleapis.com/css?family=Raleway");
+
+:root {
+  --glow-color: #5e69de;
+  --white: #fff;
+--google-blue: #4285f4;
+--button-active-blue: #1669F2;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+.glowing-btn {
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.35em 1em;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 1em;
+  left: 200px;
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+  float: left;
+  margin-right: -0.8em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0.1;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .glowing-btn{
+    font-size: 1em;
+  }
+}
+
+    
+    
+  

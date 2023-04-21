@@ -1,50 +1,27 @@
 
-/*
-.login-components{
-    display: flex;
-    height: 100vh;
-    position: relative;
-    top: 6rem;
-}
-.left-half{
-    background-color: gray;
-    flex: 1;
-}
-.right-half{
-    background-color: aqua;
-    color: black;
-    flex:1;
-}
-.right-half-inner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position:relative;
-    top:40%;
-    font-size: 3rem;
-}
-
-*/
-.login-wrapper {
+.loginwrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    flex-wrap: wrap
   }
   
-  .login-components {
+  .logincomponents {
     display: flex;
     height: 100vh;
     position: relative;
     top: 6rem;
   }
   
-  .left-half {
+  .lefthalf {
     /* background-image: linear-gradient(to bottom, #000000, #153556); */
     background-image: url(
         "/Users/arjuns/Developer/web/shopoholic/shop/src/components/loginpic.png");
     background-repeat:no-repeat;
-    background-size: 100%;
-    flex: 1;
+    background-size: 100% 100%;
+      flex:1;
     position: relative;
   }
   
@@ -57,7 +34,7 @@
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
   }
   
-  .right-half {
+  .righthalf {
     background-color: white;
     background-image: linear-gradient(to bottom, hsl(240, 31%, 10%), hsl(0, 0%, 0%));
     color: black;
@@ -69,7 +46,7 @@
   }
   
   
-  .text-main {
+  .textmain {
     /* font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 0rem;
@@ -102,7 +79,7 @@
 
   }
   
-  .text-sub {
+  .textsub {
     font-size: 1.2rem;
     margin-bottom: 2rem;
   margin-top: -50px;
@@ -118,16 +95,32 @@
     font-family: "Raleway", sans-serif;
   }
 
+  .textsubwrong{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  margin-top: -50px;
+    color: rgba(255, 0, 0, 0.762);
+    float: left;
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0, 11%, 22%),
+      0 0 0.45em red;
+    -moz-text-shadow: 0 0 0.125em hsl(0, 7%, 38%),
+      0 0 0.45em red;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 10s linear infinite;
+    font-family: "Raleway", sans-serif;
+  }
 
 
 
-  .extra-features{           
+
+  .extrafeatures{           
    gap: 170px;
    display: flex;
    margin-top: -30px;
-   
+   cursor:pointer;
   }
-  .f-btn{
+  .fbtn{
     text-decoration: none;
     background: none;
     color: var(--glow-color);
@@ -142,7 +135,7 @@
   }
 
 
-.google-btn {
+.googlebtn {
   width: 184px;
   height: 40px;
   /* background-color: var(--glow-color); */
@@ -154,7 +147,7 @@
   border-width: 1px;
   box-shadow: 0 3px 4px 0 --glow-color;
 }
-  .google-icon-wrapper {
+  .googleiconwrapper {
     position: absolute;
     margin-top: -1px;
     margin-left: -40px;
@@ -168,7 +161,7 @@
     border-style:outset;
     border-color: var(--glow-color);
   }
-  .google-icon {
+  .googleicon {
     position: absolute;
     /* background-image: url('/Users/arjuns/Developer/web/shopoholic/shop/src/components/download.png'); */
     margin-top: 11px;
@@ -176,9 +169,9 @@
     width: 18px;
     height: 18px;
   }
-  .btn-text {
+  .btntext {
     float: right;
-    margin: 11px 11px 0 0;
+    margin: 11px 9px 0 0;
     align-items: center;
     color: --white;
     font-size: 14px;
@@ -193,13 +186,13 @@
   font-family: "Raleway", sans-serif;
   border: 0px;
   }
-  .google-btn:hover {
+  .googlebtn:hover {
     box-shadow: 0 0 6px var(--google-blue);
   }
-  .google-icon-wrapper:hover {
+  .googleiconwrapper:hover {
     box-shadow: 0 0 6px var(--google-blue);
   }
-  .google-btn:active,.google-icon-wrapper:active {
+  .googlebtn:active,.googleiconwrapper:active {
     background: var(--glow-color);
     color: #fff;
   }
@@ -211,7 +204,7 @@
 
 
 
-  .form-group {
+  .formgroup {
     margin-bottom: 2rem;
      width: 700px; 
     
@@ -220,13 +213,8 @@
     
   }
   
-  .form-control {
+  .formcontrol {
      width: 100%;
-    /* border: 1px solid rgba(31, 110, 150, 0.2);
-    border-radius: 4px;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    box-shadow: 0px 5px 3px rgba(16, 84, 108, 0.5);  */
     position: relative;
     color: var(--glow-color);
     cursor: pointer;
@@ -251,6 +239,39 @@
     animation: border-flicker 10s linear infinite;
     
   }
+            /*when email or password is wrong*/
+
+  .formcontrolwrong {
+    width: 100%;
+   position: relative;
+   color: red;
+   cursor: pointer;
+   padding: 0.35em 1em;
+   border: 0.15em solid var(--glow-color);
+   border-radius: 0.45em;
+   background: none;
+   /* perspective: 2em; */
+   font-family: "Raleway", sans-serif;
+   font-size: 1.4em;
+   font-weight: 900;
+   letter-spacing: 0em;
+   left: 00px;
+   top:-1px;
+ 
+   -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+     0px 0px 0.5em 0px var(--glow-color);
+   -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+     0px 0px 0.5em 0px red;
+   box-shadow: inset 0px 0px 0.5em 0px red,
+     0px 0px 0.5em 0px var(--glow-color);
+   animation: border-flicker .1s linear infinite;
+   
+ }
+
+
+
+
+
   ::placeholder{
     color: var(--glow-color);
     background: none;
@@ -279,7 +300,7 @@
 
 
 
-.glowing-btn {
+.glowingbtn {
   position: relative;
   color: var(--glow-color);
   cursor: pointer;
@@ -303,7 +324,7 @@
   animation: border-flicker 2s linear infinite;
 }
 
-.glowing-txt {
+.glowingtxt {
   float: left;
   margin-right: -0.8em;
   -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
@@ -314,12 +335,12 @@
   animation: text-flicker 3s linear infinite;
 }
 
-.faulty-letter {
+.faultyletter {
   opacity: 0.5;
   animation: faulty-flicker 2s linear infinite;
 }
 
-.glowing-btn::before {
+.glowingbtn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -333,7 +354,7 @@
   pointer-events: none;
 }
 
-.glowing-btn::after {
+.glowingbtn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -347,32 +368,32 @@
   transition: opacity 100ms linear;
 }
 
-.glowing-btn:hover {
+.glowingbtn:hover {
   color: rgba(0, 0, 0, 0.8);
   text-shadow: none;
   animation: none;
 }
 
-.glowing-btn:hover .glowing-txt {
+.glowingbtn:hover .glowingtxt {
   animation: none;
 }
 
-.glowing-btn:hover .faulty-letter {
+.glowingbtn:hover .faultyletter {
   animation: none;
   text-shadow: none;
   opacity: 1;
 }
 
-.glowing-btn:hover:before {
+.glowingbtn:hover:before {
   filter: blur(1.5em);
   opacity: 1;
 }
 
-.glowing-btn:hover:after {
+.glowingbtn:hover:after {
   opacity: 1;
 }
 
-@keyframes faulty-flicker {
+@keyframes faultyflicker {
   0% {
     opacity: 0.1;
   }
@@ -403,7 +424,7 @@
   }
 }
 
-@keyframes text-flicker {
+@keyframes textflicker {
   0% {
     opacity: 0.1;
   }
@@ -448,7 +469,7 @@
   }
 }
 
-@keyframes border-flicker {
+@keyframes borderflicker {
   0% {
     opacity: 0.1;
   }
@@ -471,7 +492,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .glowing-btn{
+  .glowingbtn{
     font-size: 1em;
   }
 }
