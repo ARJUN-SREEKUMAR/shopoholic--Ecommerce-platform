@@ -24,10 +24,12 @@ function Navbar() {
                         </li>
                 </div>
                 <div className={nav.searchbox}>
-                     <button className={nav.btnsearch}><Icon icon='material-symbols:search' /></button>
+                    
                       < input type='text' className={nav.inputsearch} placeholder='Search something...' />
+                      <button className={nav.btnsearch}><Icon icon='material-symbols:search' /></button>    
                       
-                </div>
+                     <button className={nav.loginicon}> <Icon icon="streamline:interface-lock-combination-combo-lock-locked-padlock-secure-security-shield-keyhole" /></button>
+                     </div>
             </ul>
         </div>
     </div>

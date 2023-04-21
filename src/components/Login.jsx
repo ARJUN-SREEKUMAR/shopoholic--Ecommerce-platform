@@ -7,8 +7,11 @@ import {getAuth,signInWithEmailAndPassword,sendPasswordResetEmail} from 'firebas
 import app from '././firebase/Firebase'
 import {  signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
+import { logincontext } from './global/contex'; // usecontext 
+import { useContext } from 'react'; //usecontext
 
 //importing custom alerts
+
 
 
 
@@ -16,7 +19,7 @@ const provider = new GoogleAuthProvider(app);
 const auth=getAuth(app);
 
 function Login() {
-
+  const {islogin,setislogin}=useContext(logincontext) // use contex useage from app.js
   let navigate = useNavigate();
 
 
@@ -26,7 +29,7 @@ function Login() {
   const handleSubmit = (event) => {
 
     event.preventDefault();
-    // Here you can send the username and password to the server to check if they are correct
+    
     console.log(`Username: ${username}\nPassword: ${password}`);
 // alert("some thing fishy!!!")
     signInWithEmailAndPassword(auth, username, password)
@@ -37,7 +40,9 @@ function Login() {
     console.log("Login sucessfull");
     // ...
     navigate('/');
+    setislogin(true)
     setformClass(true);
+    
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -92,7 +97,9 @@ function Login() {
                           navigate('/signup');
                           }
                          }>don't have an account?</button> 
-                         <div class={log.googlebtn} onClick={()=>{
+
+                         
+                         <div className={log.googlebtn} onClick={()=>{
                                                       ///////////google authentication
                                       const auth = getAuth();
                                       signInWithPopup(auth, provider)
@@ -115,10 +122,10 @@ function Login() {
                                           // ...
                                         });}
                                     }  >
-                                    <div class={log.googleiconwrapper}>
-                                      <img class={log.googleicon} src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                                    <div className={log.googleiconwrapper}>
+                                      <img className={log.googleicon} src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                                     </div>
-                                    <p class={log.btntext} 
+                                    <p className={log.btntext} 
                                     ><b>Sign in with google</b></p>
                                   </div>
                          <button className={log.fbtn} onClick={()=>{
@@ -142,7 +149,7 @@ function Login() {
                          }}>forgot password?</button>  
                          </div>
             </div>
-            <button class={log.glowingbtn}><span class={log.glowingtxt}>L<span class={log.faultyletter}>O</span>GIN</span></button>
+            <button className={log.glowingbtn}><span className={log.glowingtxt}>L<span className={log.faultyletter}>O</span>GIN</span></button>
           </form>
           
         </div>
