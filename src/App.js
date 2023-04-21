@@ -10,7 +10,8 @@ import Home from './components/Home';
 import { logincontext } from './components/global/contex';
 function App() {
   
-  const [islogin, setislogin] = useState(false)
+  const [islogin, setislogin] = useState(false);
+  // const [inuser, setinuser] = useState()
   return (
    
     <logincontext.Provider    value={{islogin,setislogin} } >

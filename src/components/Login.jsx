@@ -36,13 +36,13 @@ function Login() {
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    alert("Login sucessfull");
+    // alert("Login sucessfull");
     console.log("Login sucessfull");
     // ...
-    navigate('/');
-    setislogin(true)
-    setformClass(true);
     
+    setislogin(user);
+    setformClass(true);
+    navigate('/');
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -69,7 +69,7 @@ function Login() {
         {/* <div className="gradient"></div> */}
         <p className={log.textmain}>Welcome Back..!</p>
           
-          <p className={formClass?"textsub":"textsubwrong"}>{formClass?"Please enter your credentials below":"Please check your Login credentials"}</p>
+          <p className={formClass?log.textsub:log.textsubwrong}>{formClass?"Please enter your credentials below":"Please check your Login credentials"}</p>
           <form onSubmit={handleSubmit}>
             <div className={log.formgroup}>
               <input
@@ -109,6 +109,8 @@ function Login() {
                                           const token = credential.accessToken;
                                           // The signedin user info.
                                           const user = result.user;
+                                          setislogin(user);
+                                          navigate('/')
                                           // IdP data available using getAdditionalUserInfo(result)
                                           // ...
                                         }).catch((error) => {
@@ -149,7 +151,9 @@ function Login() {
                          }}>forgot password?</button>  
                          </div>
             </div>
-            <button className={log.glowingbtn}><span className={log.glowingtxt}>L<span className={log.faultyletter}>O</span>GIN</span></button>
+               <button className={log.glowingbtn}>
+                   <span className={log.glowingtxt}>L<span className={log.faultyletter}>O</span>GIN</span>
+              </button>
           </form>
           
         </div>

@@ -5,17 +5,17 @@ import './Signup.css'
 import { useState } from 'react';
 import {getAuth,createUserWithEmailAndPassword,sendPasswordResetEmail} from 'firebase/auth'
 import app from '././firebase/Firebase'
-import {  signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import Login from './Login';
+import {  signInWithPopup, GoogleAuthProvider,updateProfile} from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
-
+import { logincontext } from './global/contex'; // usecontext 
+import { useContext } from 'react'; //usecontext
 
 
 const provider = new GoogleAuthProvider(app);
 const auth=getAuth(app);
 
 function Signup() {
-
+  const {islogin,setislogin}=useContext(logincontext) // use contex useage from app.js
   let navigate = useNavigate();
   
   const [username, setUsername] = useState("");
@@ -25,28 +25,45 @@ function Signup() {
   const handleSubmit = (event) => {
 
     event.preventDefault();
-    // Here you can send the username and password to the server to check if they are correct
+    
     console.log(`Username: ${username}\nPassword: ${password}`);
-// alert("some thing fishy!!!")
+
     createUserWithEmailAndPassword(auth, Email, password)
   .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    alert("Login sucessfull");
-    console.log("Login sucessfull");
-    // ...
-    navigate('/');
+              // Signed in 
+              const user = userCredential.user;
+             
+              console.log("Login sucessfull");
+              // ...
+              // user.updateProfile({
+              //   displayName:username
+              // })
+              setislogin(user);
+              updateProfile(auth.currentUser, {
+                displayName: username
+              }).then(() => {
+                // Profile updated!
+                // ...
+              }).catch((error) => {
+                // An error occurred
+                // ...
+              });
+              
+
+             
     
   })
   .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // alert("Please check your login credentials");
-    alert("creating user failed")
-    console.log("signup now");
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // alert("Please check your login credentials");
+                alert("creating user failed")
+                console.log("signup now");
   });
 
-     
+ 
+  navigate('/login');     
+  alert("Account created successfully please login")   
   }
   
   // let classForm = 'form-control';
@@ -101,7 +118,7 @@ function Signup() {
                           navigate('/login');
                           }
                          }>already joined?</button> 
-                         <div class="google-btn" onClick={()=>{
+                         <div className="google-btn" onClick={()=>{
                                                       ///////////google authentication
                                       const auth = getAuth();
                                       signInWithPopup(auth, provider)
@@ -113,6 +130,8 @@ function Signup() {
                                           const user = result.user;
                                           // IdP data available using getAdditionalUserInfo(result)
                                           // ...
+                                          setislogin(user);
+                                          navigate('/');
                                         }).catch((error) => {
                                           // Handle Errors here.
                                           const errorCode = error.code;
@@ -124,16 +143,16 @@ function Signup() {
                                           // ...
                                         });}
                                     }  >
-                                    <div class="google-icon-wrapper">
-                                      <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                                    <div className="google-icon-wrapper">
+                                      <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                                     </div>
-                                    <p class="btn-text" 
+                                    <p className="btn-text" 
                                     ><b>Sign up with Google</b></p>
                                   </div>
                          <button className='f-btn1' >forgot password?</button>  
                          </div>
             </div>
-            <button class='glowing-btn'><span class='glowing-txt'>SI<span class='faulty-letter'>G</span>N<span class='faulty-letter'>U</span>P</span></button>
+            <button className='glowing-btn'><span className='glowing-txt'>SI<span className='faulty-letter'>G</span>N<span className='faulty-letter'>U</span>P</span></button>
           </form>
           
         </div>
