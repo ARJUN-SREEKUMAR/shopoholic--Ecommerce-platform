@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import ho from './Home.module.css'
 import { logincontext } from './global/contex'; // usecontext 
 import { useContext ,useState,useRef } from 'react'; //usecontext
+import Banner from './Banner';
 
 function Home () {
   const {islogin,setislogin}=useContext(logincontext) // use contex useage from app.js
@@ -23,12 +24,14 @@ let a=islogin.displayName;
     
         <Navbar></Navbar>
         <div className={ho.bannerDiv}>
-            <p className={ho.welcome}>Welcome {
+            {/* <p className={ho.welcome}>Welcome {
             ren?ren:"Guest User"}
            { console.log(ren)
             }</p>
-            <p className={ho.homeIntro}> Home page Coming soon!!!</p>
+            <p className={ho.homeIntro}> Home page Coming soon!!!</p> */}
+           
         </div>
+        <Banner></Banner>
      </div>
   )
 }
