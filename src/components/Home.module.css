@@ -1,6 +1,6 @@
 
 @import url("https://fonts.googleapis.com/css?family=Raleway");
-.homeIntro{
+/* .homeIntro{
     font-size: 62px;
     padding: 00px 00px 400px 400px;
     font-family: "Raleway", sans-serif;
@@ -32,18 +32,36 @@
   text-shadow: 0 0 0.125em hsla(180, 1%, 45%, 0.3), 0 0 0.45em var(--glow-color);
   animation: text-flicker .4s linear infinite;
   
-}
+} */
 
+.homewrapper{
+  /* background-color: black; */
+  height: 100vh;
+}
 
 .bannerDiv{
     
     background-color: black;
     margin-top: 90px;
-    height: 100vh;
+    
     
 }
 
 
 :root {
     --glow-color: #5e69de;
+}
+
+
+.dotListClass{
+  position: absolute;
+  top: 422px;
+  transform: translateX(0%);
+}
+.carouselcard{
+
+  padding-right: 0px;
+width: 0px;
+
+ 
 }

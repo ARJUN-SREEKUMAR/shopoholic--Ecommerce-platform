@@ -33,6 +33,11 @@ function Navbar() {
 
 
     const {islogin,setislogin}=useContext(logincontext) // use contex useage from app.js
+
+
+  
+
+
   return (
     <div>
         <div className={nav.navbar}> 

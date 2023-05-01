@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+.wrapper{
+    color:rgb(0, 0, 0);
+    font-size: 12px;
+    /* width:15%; */
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 2px;
+    margin: 20px;
+    height: 20rem;
+    border : 1px solid black;
+    
+}
+.displaypicture{
+    position:relative;
+    width: 80%;
+   
+}
+hr{
+    color: black;
+    border-top: 3px double gray;
+    margin: 0;
+    padding: 0;
+}
+.dp{
+    background-color: azure;
+}
+.titile{
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(30, 27, 27);
+    /* background-color: rgb(0, 0, 0); */
+    margin: 0;
+    padding: 0;
+    font-family: 'Philosopher', sans-serif;
+    text-transform: capitalize;
+}
+.discription{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(30, 27, 27);
+ 
+    margin-top: 10px;
+    padding: 0;
+    font-family: 'Philosopher', sans-serif;
+    text-transform: capitalize;
+}
+.rating{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+}
+.pricing{
+    padding-top: 10px;
+    font-size: 14px;
+}
+.amount{
+   
+    font-size: 25px;
+}
