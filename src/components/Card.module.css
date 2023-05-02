@@ -11,8 +11,25 @@
     margin: 20px;
     height: 20rem;
     border : 1px solid black;
+    overflow: hidden;
+  transition: all 0.3s ease-in-out;
     
 }
+
+.wrapper:hover{
+    transform: scale(1.1);
+   
+    z-index: 1;
+    border : 1px solid rgb(141, 137, 137);
+    overflow: hidden;
+    cursor: pointer;
+      image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering: -webkit-optimize-contrast;/* Chrome, Safari */
+  image-rendering: pixelated; 
+}
+
+
+
 .displaypicture{
     position:relative;
     width: 80%;
