@@ -8,14 +8,29 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from './Card';
 
+import { db ,storage} from './firebase/Firebase';
+import { collection,doc ,addDoc,setDoc,updateDoc } from "firebase/firestore"; 
+
+
+
+
+
 function Home () {
   const {islogin,setislogin}=useContext(logincontext) // use contex useage from app.js
   console.log(islogin);
   const [ren, setren] = useState(null)
 let a=islogin.displayName;
+
+async function writeUserData(islogin) {
+  await setDoc(doc(db, "users" , islogin.uid ), {
+    name: islogin.displayName,
+    email: islogin.email,
+    
+  });
+}
     useEffect(()=>{
-      if (islogin && islogin.displayName) {
-        setren(islogin.displayName);
+      if (islogin) {
+        writeUserData(islogin)
       }
 
     }, [islogin])  
@@ -65,6 +80,7 @@ let a=islogin.displayName;
     }
   };
   
+  
   return (
     <div className={ho.homewrapper}>
     
@@ -105,6 +121,12 @@ let a=islogin.displayName;
 <Card/>
 <Card/>
 </Carousel>
+
+{/* <button onClick={async()=>{                                           //test bench button
+   writeUserData(islogin);
+  
+
+}}>test bench</button> */}
 
         </div>
         

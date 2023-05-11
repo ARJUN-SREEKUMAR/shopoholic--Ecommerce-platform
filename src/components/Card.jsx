@@ -1,11 +1,13 @@
 import React from 'react'
 import card from './Card.module.css'
 import RatingStars from 'react-rating-stars-component';
+import Getimg from './firebase/Getimg';
 function Card() {
   return (
     <div className={card.wrapper}>
          <div className={card.dp}>
-            <img className={card.displaypicture} src="https://cdn.pixabay.com/photo/2013/07/12/18/20/shoes-153310_960_720.png"/>  
+       
+               <img className={card.displaypicture} src={Getimg ({imageName: "Waiting.jpeg" }) }/>  
             <hr></hr>
            
             </div>
