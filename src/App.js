@@ -8,6 +8,7 @@ import Signup from './components/Signup';
 import Home from './components/Home';
 
 import { logincontext } from './components/global/contex';
+import Productview from './components/Productview';
 function App() {
   
   const [islogin, setislogin] = useState(false);
@@ -21,6 +22,7 @@ function App() {
                   <Route path="/signup" element={<Signup />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/" element={<Home />} /> 
+                  <Route path="/product" element={<Productview />} /> 
                 </Routes> 
                 </BrowserRouter> 
   

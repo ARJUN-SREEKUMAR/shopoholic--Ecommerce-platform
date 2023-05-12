@@ -1,12 +1,12 @@
 .wrapper{
     color:black;
     font-size: 62px;
-    width:100%;
-    /* background-color: aqua; */
-    text-align: center;
-    margin-top: 2px;
-    height: 20rem;
     
+    text-align: center;
+    width: 100%;
+    margin-top: 2px;
+    height: 400px;
+    background-repeat: no-repeat;;
 }
 .t1{
     position: relative;

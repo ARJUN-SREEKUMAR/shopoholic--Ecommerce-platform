@@ -7,9 +7,10 @@ import Banner from './Banner';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from './Card';
-
+import Getimg from './firebase/Getimg';
 import { db ,storage} from './firebase/Firebase';
 import { collection,doc ,addDoc,setDoc,updateDoc } from "firebase/firestore"; 
+import Titilecard from './Titilecard';
 
 
 
@@ -19,6 +20,7 @@ function Home () {
   const {islogin,setislogin}=useContext(logincontext) // use contex useage from app.js
   console.log(islogin);
   const [ren, setren] = useState(null)
+  const data = ['1', '2', '3','4'];
 let a=islogin.displayName;
 
 async function writeUserData(islogin) {
@@ -48,7 +50,7 @@ async function writeUserData(islogin) {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 1
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -86,41 +88,31 @@ async function writeUserData(islogin) {
     
     <Navbar />
         <div className={ho.bannerDiv}>
-      
-            {/* <p className={ho.welcome}>Welcome {
-            ren?ren:"Guest User"}
-           { console.log(ren)
-            }</p>
-            <p className={ho.homeIntro}> Home page Coming soon!!!</p> */}
+    
           
            <Carousel responsive={responsive1} autoPlay={true} autoPlaySpeed={3000} showDots={true} renderDotsOutside={true} infinite={true} rewindWithAnimation={true} dotListClass={ho.dotListClass}>
-           <Banner titile="50% off on all orders" />
-            <Banner titile="Clearence sale"/>
-            <Banner titile="Offer closes soon" />
-            <Banner titile="Free Home Delivery on first order"/>
+           <Banner titile="50% off on all orders" 
+           url={Getimg ({imageName: "B (1).gif" }) } />
+
+            <Banner titile="Clearence sale" url={Getimg ({imageName: "B (2).gif" }) } />
+
+            <Banner titile="Offer closes soon"  url={Getimg ({imageName: "B (3).gif" }) }/>
+
+            <Banner titile="Free Home Delivery on first order"
+             url={Getimg ({imageName: "B(4).gif" }) }/>
 </Carousel>;
 <div className={ho.renderoutside}>
     &nbsp;
 </div>
+  
 
 <Carousel responsive={responsive2} autoPlay={false} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={true} rewindWithAnimation={true}>
+<Titilecard/>
+{data.map((item) => <Card id={item}/> )}
 
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
-<Card/>
 </Carousel>
+
+
 
 {/* <button onClick={async()=>{                                           //test bench button
    writeUserData(islogin);

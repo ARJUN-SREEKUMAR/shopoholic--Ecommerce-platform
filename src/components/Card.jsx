@@ -2,12 +2,16 @@ import React from 'react'
 import card from './Card.module.css'
 import RatingStars from 'react-rating-stars-component';
 import Getimg from './firebase/Getimg';
-function Card() {
+function Card(props) {
+  const handleClick = () => {
+    alert('Click Happened '+props.id);
+  }
   return (
-    <div className={card.wrapper}>
+    <div className={card.wrapper}
+    onClick={handleClick} >
          <div className={card.dp}>
        
-               <img className={card.displaypicture} src={Getimg ({imageName: "Waiting.jpeg" }) }/>  
+               <img className={card.displaypicture} src={Getimg ({imageName: "sapro.jpeg" }) }  />  
             <hr></hr>
            
             </div>
