@@ -26,22 +26,52 @@ a{
     
 position: fixed;
 width: 200px;
-height: 27px;
+height: 57px;
 left: 77px;
-top: 32px;
+top: 22px;
 
 font-family: 'Caveat', cursive;
 font-style: normal;
 font-weight: 55;
 font-size: 55px;
-line-height: 24px;
+line-height: 44px;
 text-align: center;
 text-transform:capitalize;
 
 /* White */
 
-color: #FFFFFF;
+background-image: linear-gradient(to right, hsl(278, 89%, 45%), hsl(191, 94%, 30%), hsl(302, 91%, 47%), hsl(185, 96%, 40%));
+-webkit-background-clip: text; 
+background-clip: text; 
+color: transparent;
+
+background-size: 300%;
+background-position: -100%;  
+
+animation: animatedText 4s infinite alternate-reverse;
 }
+@keyframes animatedText{
+  to{
+    background-position: 100%; 
+  }
+}
+
+.text{
+
+  
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;
+  
+  /* background-size: 300%;
+  background-position: -100%;   */
+  
+  animation: animatedText 5s infinite alternate-reverse;
+}
+
+
+
+
 .elementswrapper{
   position: fixed;
     display: flex;
@@ -90,13 +120,13 @@ flex-grow: 0;
 
 
 .searchbox{
-  position: fixed;
+  position: absolute;
     width: 100%;
-    height:500px;
+    height:100px;
     top: 26px;
     left: 50%;
     margin: 0px;
-    padding: 0px;
+    margin-left: 10px;
     gap: 20px;
 
     justify-content: center;
@@ -119,7 +149,15 @@ flex-grow: 0;
     
   }
   .inputsearch::placeholder{
-    color: grey;
+    /* color: grey; */
+    background-image: linear-gradient(to right, #00F260, #f79d00, #0575E6, #64f38c);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    
+    background-size: 300%;
+    background-position: -100%; 
+    animation: animatedText 5s infinite alternate-reverse;
     text-align: center;
   }
 
@@ -151,7 +189,7 @@ flex-grow: 0;
   color:white;
   border-color: transparent;
   font-size: 40px;
-  /* margin-top: -900px; */
+  
    top: 17px;
   margin: auto;
   left: 95%;
@@ -175,3 +213,5 @@ flex-grow: 0;
 
 }
   
+
+

@@ -34,7 +34,7 @@
     position:relative;
     /* width: 80%; */
    
-    width: 55%;
+    width: 130px;
   object-fit: contain;
    /* for image with 420 X 5 */
   /* object-fit:contain; */
@@ -52,11 +52,11 @@ hr{
     height: 40%;
 }
 .titile{
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
     color: rgb(30, 27, 27);
     /* background-color: rgb(0, 0, 0); */
-    margin: 0;
+    margin-top: 48px;
     padding: 0;
     font-family: 'Philosopher', sans-serif;
     text-transform: capitalize;
@@ -66,7 +66,7 @@ hr{
     font-weight: bold;
     color: rgb(30, 27, 27);
  
-    margin-top: 26px;
+    margin-top: 5px;
     padding: 0;
     font-family: 'Philosopher', sans-serif;
     text-transform: capitalize;

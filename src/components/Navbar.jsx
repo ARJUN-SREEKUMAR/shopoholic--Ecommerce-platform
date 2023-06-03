@@ -2,7 +2,7 @@ import React from 'react'
 import nav  from './Navbar.module.css';
 import { Icon } from '@iconify/react';
 import { logincontext } from './global/contex'; // usecontext 
-import { useContext , useState,useEffect} from 'react'; //usecontext
+import { useContext ,} from 'react'; //usecontext
 import { useNavigate ,Link } from 'react-router-dom';
 
 function Navbar() {
@@ -27,12 +27,12 @@ function Navbar() {
             return null; 
           }
         const initials = displayName.split(" ").map((word) => word[0]).join("");
-        return `https://ui-avatars.com/api/?name=${initials}`;
+        return `https://ui-avatars.com/api/?background=00bfff & name=${initials}`;
       };
 
 
 
-    const {islogin,setislogin}=useContext(logincontext) // use contex useage from app.js
+    const {islogin}=useContext(logincontext) // use contex useage from app.js
 
 
   
@@ -43,7 +43,7 @@ function Navbar() {
         <div className={nav.navbar}> 
             <ul>
                 <li className={nav.title}>
-                <Link to="/">Shopoholic..</Link> 
+                <Link to="/" className={nav.text}>Shopoholic..</Link> 
                 </li>
                 <div className={nav.elementswrapper}>
                         <li className={nav.navelements}>
@@ -63,10 +63,12 @@ function Navbar() {
                         </li>
                         
                 </div>
-                <div className={nav.searchbox}>
-                    
-                      < input type='text' className={nav.inputsearch} placeholder='Search something...' />
-                      </div>
+                            <div className={nav.searchbox}>
+                                
+                                < input type='text' className={nav.inputsearch} placeholder='Search something...' />
+                            </div>
+
+                            
                       <button className={nav.btnsearch}><Icon icon='material-symbols:search' /></button>    
                             
                      <button className={nav.loginicon} onClick={lockbuttonnavigate}> 

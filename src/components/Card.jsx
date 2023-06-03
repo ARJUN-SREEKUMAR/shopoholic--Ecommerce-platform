@@ -15,9 +15,10 @@ function Card(props) {
             <hr></hr>
            
             </div>
+
             <div className={card.titile}>
               convers 
-            </div>
+              </div>
             <div className={card.discription}>
               Men's Chuck 70 Organic Canvas High Top Sneakers
             </div>
@@ -26,7 +27,7 @@ function Card(props) {
                           count={5}
                           edit={false}
                           size={22}
-                          value={3.5}
+                          value={2.5}
                           isHalf={true}
                           activeColor="#DAA520"
 
@@ -35,6 +36,8 @@ function Card(props) {
             <div className={card.pricing}>
               ₹<span className={card.amount}>2,999</span>
             </div>
+            
+
     </div>
   )
 }

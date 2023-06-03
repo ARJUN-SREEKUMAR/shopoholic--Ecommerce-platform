@@ -1,0 +1,13 @@
+.sweetloading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    background-color: black;
+    height: 100vh;
+}
+.wrapper{
+    /* margin-left: 35%;
+    margin-top: 10%; */
+  
+}
