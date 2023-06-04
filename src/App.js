@@ -9,6 +9,7 @@ import Home from './components/Home';
 
 import { logincontext } from './components/global/contex';
 import Productview from './components/Productview';
+import Load from './components/Load';
 function App() {
   
   const [islogin, setislogin] = useState(false);
@@ -22,6 +23,7 @@ function App() {
                   <Route path="/signup" element={<Signup />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/" element={<Home />} /> 
+                  <Route path="/load" element={<Load />} />
 
                   <Route path="/product" element={<Productview />} /> 
                 </Routes> 

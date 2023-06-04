@@ -212,6 +212,11 @@ flex-grow: 0;
   width: 50px;
 
 }
+.cartico{
+  position: fixed;
+  top:25px;
+  right: 125px;
+}
   
 
 

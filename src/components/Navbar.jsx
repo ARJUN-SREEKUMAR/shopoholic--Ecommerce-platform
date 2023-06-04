@@ -73,11 +73,16 @@ function Navbar() {
                             
                      <button className={nav.loginicon} onClick={lockbuttonnavigate}> 
                      { islogin? ( islogin.photoURL ? (
-                                            <img className={nav.avatar} src={islogin.photoURL} alt="Image" />
+                                                <> <button > <Icon icon="mi:shopping-cart" color="white" className={nav.cartico}  />
+                                                </button> 
+                                                    <img className={nav.avatar} src={islogin.photoURL} alt="Image" />
+                                            </>
                                         )
                                         :
-                                        (
-                                            <img className={nav.avatar} src={getAvatar(islogin.displayName)} alt="Image" /> 
+                                        (    <>
+                                            <Icon icon="mi:shopping-cart" color="white"/>
+                                            <img className={nav.avatar} src={getAvatar(islogin.displayName)} alt="Image" />
+                                            </> 
                                         )
                                  
                                  )

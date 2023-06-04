@@ -11,10 +11,15 @@ function Load() {
 
     <div className={lod.wrapper}>
 
-    <span  className={lod.text}>Shopoholic</span>
-
+   <img src="https://firebasestorage.googleapis.com/v0/b/shopoholic-138fd.appspot.com/o/icon-512.png?alt=media&token=8befaa7d-fbae-42ee-a68d-5e999adacebd" alt="" className={lod.img} />
+   {/* <img src="" alt="" className={lod.img} /> */}
     </div>
-     
+    <section>
+	<div class={lod.content}>
+		<h2>Shopoholic</h2>
+		<h2>Shopoholic</h2>
+	</div>
+</section>
     </div>
   );
 }

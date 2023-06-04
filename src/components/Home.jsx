@@ -18,7 +18,7 @@ import Load from './Load';
 
 function Home () {
 
-  getcategory();
+
 
   const [Looad, setLooad] = useState(false);
 
@@ -34,12 +34,13 @@ function Home () {
 
   }, []);
 
-
+  // const [cat,setCat] = useState("")
+  // setCat("footware")
   getcategory();
 
   async function getcategory() {
     const proRef = collection(db, "products");
-    const q = query(proRef, where("category", "==", "footwear"));
+    const q = query(proRef, where("category", "==", "footware"));
   // const q = query(collection(db, "products"));
   //, where("category", "==", "footwear"))
   const querySnapshot = await getDocs(q);
@@ -129,6 +130,8 @@ async function writeUserData(islogin) {
   };
   
   return (
+
+    
     <div>
       
       <div className={ho.homewrapper}>
