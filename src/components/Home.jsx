@@ -24,7 +24,7 @@ function Home () {
   const [products3, setProducts3] = useState([]);
   const [products4, setProducts4] = useState([]);
   const [products5, setProducts5] = useState([]);
-  const [products6, setProducts6] = useState([]);
+
   const [Looad, setLooad] = useState(false);
 
   // useEffect(() => {
