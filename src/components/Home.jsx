@@ -19,39 +19,131 @@ import Load from './Load';
 function Home () {
 
 
-
+  const [products, setProducts] = useState([]);
+  const [products2, setProducts2] = useState([]);
+  const [products3, setProducts3] = useState([]);
+  const [products4, setProducts4] = useState([]);
+  const [products5, setProducts5] = useState([]);
+  const [products6, setProducts6] = useState([]);
   const [Looad, setLooad] = useState(false);
 
-  useEffect(() => {
-    setLooad(true);
+  // useEffect(() => {
+  //   setLooad(true);
 
-    const timer = setTimeout(() => {
-      setLooad(false);
-    }, 5000);
+  //   const timer = setTimeout(() => {
+  //     setLooad(false);
+  //   }, 5000);
 
-    return () => clearTimeout(timer); 
-    // Clear the timer on component unmount
+  //   return () => clearTimeout(timer); 
+  //   // Clear the timer on component unmount
 
-  }, []);
+  // }, []);
 
   // const [cat,setCat] = useState("")
   // setCat("footware")
-  getcategory();
 
-  async function getcategory() {
+  
+  useEffect(() => {
+    getcategory1();
+    getcategory2();
+    getcategory3();
+    getcategory4();
+  }, []);
+
+
+
+
+  async function getcategory1() {
     const proRef = collection(db, "products");
-    const q = query(proRef, where("category", "==", "footware"));
+    const q = query(proRef, where("category", "==", "mobile"));
   // const q = query(collection(db, "products"));
   //, where("category", "==", "footwear"))
   const querySnapshot = await getDocs(q);
+  // console.log(q);
+  // console.log(doc.data());
+  // console.log(querySnapshot.docs[0].data().titile);
+  
+  const productsData = querySnapshot.docs.map((doc) => doc.data());
+  setProducts(productsData);
+
+
   querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
-    // console.log(doc.id, " => ", doc.data());
-
+    console.log(doc.id, " => ", doc.data().titile);
+   
   });
-  console.log(querySnapshot.docs[0].data());
+  // console.log(" => ", doc.data());
+  // console.log(querySnapshot.docs[0]);
   }
 
+  async function getcategory2() {
+    const proRef = collection(db, "products");
+    const q = query(proRef, where("category", "==", "footwear"));
+  // const q = query(collection(db, "products"));
+  //, where("category", "==", "footwear"))
+  const querySnapshot = await getDocs(q);
+  // console.log(q);
+  // console.log(doc.data());
+  // console.log(querySnapshot.docs[0].data().titile);
+  
+  const productsData = querySnapshot.docs.map((doc) => doc.data());
+  setProducts2(productsData);
+
+
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data().titile);
+   
+  });
+  // console.log(" => ", doc.data());
+  // console.log(querySnapshot.docs[0]);
+  }
+
+  async function getcategory3() {
+    const proRef = collection(db, "products");
+    const q = query(proRef, where("category", "==", "electronics"));
+  // const q = query(collection(db, "products"));
+  //, where("category", "==", "footwear"))
+  const querySnapshot = await getDocs(q);
+  // console.log(q);
+  // console.log(doc.data());
+  // console.log(querySnapshot.docs[0].data().titile);
+  
+  const productsData = querySnapshot.docs.map((doc) => doc.data());
+  setProducts3(productsData);
+
+
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data().titile);
+   
+  });
+  // console.log(" => ", doc.data());
+  // console.log(querySnapshot.docs[0]);
+  }
+
+  async function getcategory4() {
+    const proRef = collection(db, "products");
+    const q = query(proRef, where("category", "==", "personal care"));
+  // const q = query(collection(db, "products"));
+  //, where("category", "==", "footwear"))
+  const querySnapshot = await getDocs(q);
+  // console.log(q);
+  // console.log(doc.data());
+  // console.log(querySnapshot.docs[0].data().titile);
+  
+  const productsData = querySnapshot.docs.map((doc) => doc.data());
+  setProducts4(productsData);
+
+
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data().titile);
+   
+  });
+  // console.log(" => ", doc.data());
+  // console.log(querySnapshot.docs[0]);
+  }
 
   // const [products, setproducts] = useState([])
   // const [loading, setloading] = useState(false)
@@ -141,7 +233,7 @@ async function writeUserData(islogin) {
           <div className={ho.bannerDiv}>
       
             
-             <Carousel responsive={responsive1} autoPlay={true} autoPlaySpeed={3000} showDots={true} renderDotsOutside={true} infinite={true} rewindWithAnimation={true} dotListClass={ho.dotListClass} >
+             <Carousel responsive={responsive1} autoPlay={false} autoPlaySpeed={3000} showDots={true} renderDotsOutside={true} infinite={true} rewindWithAnimation={true} dotListClass={ho.dotListClass} >
              <Banner titile="50% off on all orders" 
              url={Getimg ({imageName: "B (1).gif" }) } />
   
@@ -157,13 +249,37 @@ async function writeUserData(islogin) {
   </div>
     
   
-  <Carousel responsive={responsive2} autoPlay={false} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={true} rewindWithAnimation={true}>
+  <Carousel responsive={responsive2} autoPlay={true} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={false} rewindWithAnimation={true} draggable={true}>
   <Titilecard/>
-  {data.map((item) => 
-  <Card id={item}/> 
+  {products.map((item) => 
+  <Card item={item}/> 
   )}
   
   </Carousel>
+  <Carousel responsive={responsive2} autoPlay={true} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={false} rewindWithAnimation={true}>
+  <Titilecard/>
+  {products2.map((item) => 
+  <Card item={item}/> 
+  )}
+  
+  </Carousel>
+  <Carousel responsive={responsive2} autoPlay={true} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={false} rewindWithAnimation={true}>
+  <Titilecard/>
+  {products3.map((item) => 
+  <Card item={item}/> 
+  )}
+  
+  </Carousel>
+  <Carousel responsive={responsive2} autoPlay={true} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={false} rewindWithAnimation={true}>
+  <Titilecard/>
+  {products4.map((item) => 
+  <Card item={item}/> 
+  )}
+  
+  </Carousel>
+
+
+ 
   
   
   

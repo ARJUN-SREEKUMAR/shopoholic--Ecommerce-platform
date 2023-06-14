@@ -1,6 +1,7 @@
 import React from 'react'
 import ti from './Titilecard.module.css'
 import Getimg from './firebase/Getimg';
+
 function Titilecard(props) {
   return (
     <div>

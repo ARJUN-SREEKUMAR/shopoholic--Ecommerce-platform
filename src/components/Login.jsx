@@ -19,7 +19,8 @@ const provider = new GoogleAuthProvider(app);
 const auth=getAuth(app);
 
 function Login() {
-  const {islogin,setislogin}=useContext(logincontext) // use contex useage from app.js
+  const {islogin,setislogin}=useContext(logincontext) 
+  // use contex useage from app.js
   let navigate = useNavigate();
 
 

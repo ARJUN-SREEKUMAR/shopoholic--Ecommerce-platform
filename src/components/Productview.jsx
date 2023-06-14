@@ -1,7 +1,11 @@
 import React from 'react'
 import Navbar from './Navbar'
 import po from './Productview.module.css'
+// import { productcontext } from './global/contex';
+// import { useContext } from 'react';
+
 function Productview(props) {
+  // const {product,setProduct}=useContext(productcontext)
   return (
     <div>
         <Navbar></Navbar>
@@ -18,7 +22,7 @@ function Productview(props) {
                 <img src="https://firebasestorage.googleapis.com/v0/b/shopoholic-138fd.appspot.com/o/Image.png?alt=media&token=25d75a5d-cc35-4a11-a2a0-8db429e8a6d7" alt="product" className={po.img5}/>
                 </div>
               <div className={po.rhs}>
-                <h1 className={po.heading}>TRACK BUTTONS</h1>
+                <h1 className={po.heading}>product.titile</h1>
                 <p className={po.price}> ₹ 1,999</p>
                 
                 <p className={po.description}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non odit distinctio assumenda explicabo eius, pariatur deserunt reiciendis quae autem harum numquam eveniet enim aspernatur corporis esse architecto molestias. Sunt, ea!</p>

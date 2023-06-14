@@ -13,11 +13,12 @@ import Load from './components/Load';
 function App() {
   
   const [islogin, setislogin] = useState(false);
+  const [product, setproduct] = useState(false);
   // const [inuser, setinuser] = useState()
   return (
    
     <logincontext.Provider    value={{islogin,setislogin} } >
-     
+     {/* <productcontext.Provider value={{product,setproduct} } > */}
               <BrowserRouter>
               <Routes>
                   <Route path="/signup" element={<Signup />} />
@@ -28,7 +29,7 @@ function App() {
                   <Route path="/product" element={<Productview />} /> 
                 </Routes> 
                 </BrowserRouter> 
-  
+      {/* </productcontext.Provider > */}
     </logincontext.Provider >
   );
 }

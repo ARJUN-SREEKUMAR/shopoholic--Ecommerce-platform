@@ -40,7 +40,7 @@ text-transform:capitalize;
 
 /* White */
 
-background-image: linear-gradient(to right, hsl(278, 89%, 45%), hsl(191, 94%, 30%), hsl(302, 91%, 47%), hsl(185, 96%, 40%));
+background-image: linear-gradient(to right, #B38B6D, rgb(176, 143, 116), hsl(32, 100%, 75%), hsl(34, 51%, 43%));
 -webkit-background-clip: text; 
 background-clip: text; 
 color: transparent;
@@ -150,7 +150,7 @@ flex-grow: 0;
   }
   .inputsearch::placeholder{
     /* color: grey; */
-    background-image: linear-gradient(to right, #00F260, #f79d00, #0575E6, #64f38c);
+    background-image: linear-gradient(to left, #805f18, #795d48, #ffffff, #ffffff);
     -webkit-background-clip: text; 
     background-clip: text; 
     color: transparent;
