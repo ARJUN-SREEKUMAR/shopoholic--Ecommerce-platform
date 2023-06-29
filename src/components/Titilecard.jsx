@@ -8,7 +8,7 @@ function Titilecard(props) {
         <div className={ti.wrapper} >
 
             <div className={ti.titile}>
-                <img className={ti.displaypicture} src={Getimg ({imageName: "Screenshot 2023-05-12 at 12.16.35 AM.png" }) }/>  
+                <img className={ti.displaypicture} src={props.img}/>  
 
             </div>
         </div>

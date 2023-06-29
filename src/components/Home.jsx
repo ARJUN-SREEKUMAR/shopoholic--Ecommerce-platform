@@ -250,7 +250,7 @@ async function writeUserData(islogin) {
     
   
   <Carousel responsive={responsive2} autoPlay={true} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={false} rewindWithAnimation={true} draggable={true}>
-  <Titilecard/>
+  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic-138fd.appspot.com/o/offerelectronics.png?alt=media&token=6ed09898-8b80-43a7-ba26-42433a97825b"/>
   {products.map((item) => 
   <Card item={item}/> 
   )}
@@ -264,7 +264,7 @@ async function writeUserData(islogin) {
   
   </Carousel>
   <Carousel responsive={responsive2} autoPlay={true} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={false} rewindWithAnimation={true}>
-  <Titilecard/>
+  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic-138fd.appspot.com/o/offerelectronics.png?alt=media&token=6ed09898-8b80-43a7-ba26-42433a97825b"/>
   {products3.map((item) => 
   <Card item={item}/> 
   )}

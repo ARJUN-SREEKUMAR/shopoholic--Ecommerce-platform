@@ -11,9 +11,13 @@ import { useContext } from 'react';
 
 
 function Card(props) {
+  
   let navigate = useNavigate();
   // const {islogin,setislogin}=useContext(logincontext.itemm)
   const prooo=props.item;
+const [expopro, setexpopro] = useState(prooo);
+
+ 
   
   const handleClick = () => {
     // alert('Click Happened '+props.item.titile);
@@ -73,6 +77,7 @@ function Card(props) {
 
     </div>
   )
+
 }
 
 export default Card

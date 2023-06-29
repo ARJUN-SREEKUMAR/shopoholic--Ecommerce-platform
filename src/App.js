@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import Home from './components/Home';
-
+import Cart from './components/Cart';
 import { logincontext } from './components/global/contex';
 import Productview from './components/Productview';
 import Load from './components/Load';
@@ -25,7 +25,7 @@ function App() {
                   <Route path="/login" element={<Login />} />
                   <Route path="/" element={<Home />} /> 
                   <Route path="/load" element={<Load />} />
-
+                   <Route path="/cart" element={<Cart />} /> 
                   <Route path="/product" element={<Productview />} /> 
                 </Routes> 
                 </BrowserRouter> 
