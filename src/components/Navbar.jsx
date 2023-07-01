@@ -69,18 +69,19 @@ function Navbar() {
                             </div>
 
                             
-                      <button className={nav.btnsearch}><Icon icon='material-symbols:search' /></button>    
+                      {/* <button className={nav.btnsearch}><Icon icon='material-symbols:search' /></button>     */}
                             
                      <button className={nav.loginicon} onClick={lockbuttonnavigate}> 
                      { islogin? ( islogin.photoURL ? (
-                                                <> <button > <Icon icon="mi:shopping-cart" color="white" className={nav.cartico}  />
-                                                </button> 
+                                                <> 
+                                                {/* <button > <Icon icon="mi:shopping-cart" color="white" className={nav.cartico}  />
+                                                </button>  */}
                                                     <img className={nav.avatar} src={islogin.photoURL} alt="Image" />
                                             </>
                                         )
                                         :
                                         (    <>
-                                            <Icon icon="mi:shopping-cart" color="white"/>
+                                            {/* <Icon icon="mi:shopping-cart" color="white"/> */}
                                             <img className={nav.avatar} src={getAvatar(islogin.displayName)} alt="Image" />
                                             </> 
                                         )

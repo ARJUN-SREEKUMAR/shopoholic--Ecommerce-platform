@@ -7,6 +7,10 @@
    
     background-blend-mode:multiply ;
 }
+.img1{
+    height:650px;
+    margin-top: 75px;
+}
 .restimages{
     display: flex;
     flex-direction: column;
@@ -18,11 +22,11 @@
     padding-top:10px ;
 }
 .heading{
-    position: absolute;
-    width: 321px;
+    position: relative;
+    width: 550px;
     height: 56px;
-    left: 1280px;
-    top: 243px;
+    left: 603px;
+    top: 273px;
     
     font-family: 'Montserrat';
     font-style: normal;
@@ -34,16 +38,16 @@
 }
 .price{
 
-position: absolute;
-width: 86px;
+position: relative;
+width: 550px;
 height: 34px;
-left: 1480px;
+left: 303px;
 top: 299px;
-
+text-align:right;
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 300;
-font-size: 22px;
+font-size: 32px;
 line-height: 27px;
 
 color: #000000;
@@ -60,7 +64,7 @@ color: #000000;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 22px;
 
     color: #000000;
@@ -143,7 +147,7 @@ button:disabled,
     button[disabled] {
         border: 1px dashed black;
         background-color: rgb(255, 255, 255);
-        color: rgb(88, 88, 88);
+        color: hsl(0, 0%, 75%);
         
         cursor: not-allowed;
     }

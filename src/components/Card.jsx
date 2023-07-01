@@ -24,7 +24,7 @@ const [expopro, setexpopro] = useState(prooo);
     //navigate to product page with props.item.id
     // setProduct(prooo);
     
-    // navigate('/product');
+    navigate('/product', { state: { obj1: prooo } });
 
 
   }

@@ -10,6 +10,7 @@ import Cart from './components/Cart';
 import { logincontext } from './components/global/contex';
 import Productview from './components/Productview';
 import Load from './components/Load';
+import PaymentComponent from './components/PaymentComponent';
 function App() {
   
   const [islogin, setislogin] = useState(false);
@@ -27,6 +28,7 @@ function App() {
                   <Route path="/load" element={<Load />} />
                    <Route path="/cart" element={<Cart />} /> 
                   <Route path="/product" element={<Productview />} /> 
+                  <Route path='/payment' element={<PaymentComponent />} />
                 </Routes> 
                 </BrowserRouter> 
       {/* </productcontext.Provider > */}

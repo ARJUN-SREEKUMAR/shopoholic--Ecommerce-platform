@@ -1,0 +1,73 @@
+/* PaymentComponent.module.css */
+.paymentContainer {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/shopoholic-138fd.appspot.com/o/495%20nn.jpg?alt=media&token=1a2b722b-c4b0-42c4-9f9d-e64c48e71968"),url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png") ;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 100%;
+    margin:  auto;
+  }
+  
+  .productName {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .productImage {
+    width: 10%;
+   
+    object-fit: cover;
+    /* margin: auto; */
+    margin-left: 770px;
+    margin-top: 0px;
+    align-items: center;
+    
+  }
+  
+  .paymentForm {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 400px;
+    top: -40px;
+    
+  }
+  
+  .inputField {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 50%;
+    color: black;
+    
+  }
+  .inputFieldlabel {
+   
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 50%;
+    color: black;
+  }
+  .inputField::placeholder {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 50%;
+    color: rgb(86, 86, 86);
+  }
+  
+  .payButton {
+    background-color: #2ec4cc;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    width: 50%;
+  }
+  
