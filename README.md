@@ -1,4 +1,4 @@
-Sure, here is a README.md file for your e-commerce platform in Git:
+
 
 
 # Shopoholc
