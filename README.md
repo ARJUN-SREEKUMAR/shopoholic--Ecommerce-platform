@@ -1,9 +1,9 @@
 
 
 
-# Shopoholc
+# Shopoholic
 
-Shopoholc is an e-commerce platform built with ReactJS, npm, and Firebase. It allows users to browse and purchase products from a variety of categories.
+Shopohoilc is an e-commerce platform built with ReactJS, npm, and Firebase. It allows users to browse and purchase products from a variety of categories.
 
 ## Features
 
