@@ -1,0 +1,17 @@
+.wrapper{
+    color:black;
+    font-size: 62px;
+    
+    text-align: center;
+    width: 100%;
+    margin-top: 2px;
+    height: 400px;
+    background-repeat: no-repeat;;
+}
+.t1{
+    position: relative;
+    top:30%;
+    /* left: 0%; */
+    text-align: center;
+    color: aliceblue;
+}

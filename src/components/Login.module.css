@@ -9,10 +9,11 @@
   }
   
   .logincomponents {
+
     display: flex;
     height: 100vh;
     position: relative;
-    top: 6rem;
+    top: 1rem;
   }
   
   .lefthalf {
@@ -171,10 +172,10 @@
   }
   .btntext {
     float: right;
-    margin: 11px 9px 0 0;
+    /* margin: 11px 9px 0 0; */
     align-items: center;
     color: --white;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.3px;
     
     -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),

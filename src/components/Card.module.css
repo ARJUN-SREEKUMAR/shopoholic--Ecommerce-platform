@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+.wrapper{
+    color:rgb(0, 0, 0);
+    font-size: 12px;
+    /* width:15%; */
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 2px;
+    margin: 20px;
+    height: 20rem;
+    border : 1px solid black;
+    overflow: hidden;
+  transition: all 0.6s ease-in-out;
+    
+}
+
+.wrapper:hover{
+    transform: scale(1.1);
+   
+    z-index: 1;
+    border : 1px solid rgb(141, 137, 137);
+    overflow: hidden;
+    cursor: pointer;
+      image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering: -webkit-optimize-contrast;/* Chrome, Safari */
+  image-rendering: pixelated; 
+}
+
+
+
+.displaypicture{
+    position:relative;
+    /* width: 80%; */
+   
+    width: 120px;
+  object-fit: contain;
+   /* for image with 420 X 5 */
+  /* object-fit:contain; */
+   
+}
+hr{
+    color: black;
+    border-top: 3px double gray;
+    margin: 0;
+    padding: 0;
+}
+.dp{
+    background-color: azure;
+    width: 100%;
+    height: 40%;
+}
+.titile{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(30, 27, 27);
+    /* background-color: rgb(0, 0, 0); */
+    margin-top: 48px;
+    padding: 0;
+    font-family: 'Philosopher', sans-serif;
+    text-transform: capitalize;
+}
+.discription{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(30, 27, 27);
+ 
+    margin-top: 5px;
+    padding: 0;
+    font-family: 'Philosopher', sans-serif;
+    text-transform: capitalize;
+}
+.rating{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+}
+.pricing{
+    padding-top: 10px;
+    font-size: 14px;
+}
+.amount{
+   
+    font-size: 25px;
+}
