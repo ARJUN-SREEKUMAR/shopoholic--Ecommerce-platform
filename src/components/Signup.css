@@ -12,13 +12,13 @@
     display: flex;
     height: 100vh;
     position: relative;
-    top: 6rem;
+    top: 0rem;
   }
   
   .left-half {
     /* background-image: linear-gradient(to bottom, #000000, #153556); */
     background-image: url(
-        "/Users/arjuns/Developer/web/shopoholic/shop/src/components/signup.jpg");
+        "signup.jpg");
     background-repeat:no-repeat;
     background-size: 100% ;
       flex:1;
@@ -41,7 +41,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding-top: 20px;
+    /* justify-content: center; */
     align-items: center;
   }
   

@@ -9,16 +9,17 @@
   }
   
   .logincomponents {
+
     display: flex;
     height: 100vh;
     position: relative;
-    top: 6rem;
+    top: 1rem;
   }
   
   .lefthalf {
     /* background-image: linear-gradient(to bottom, #000000, #153556); */
     background-image: url(
-        "/Users/arjuns/Developer/web/shopoholic/shop/src/components/loginpic.png");
+        "loginpic.png");
     background-repeat:no-repeat;
     background-size: 100% 100%;
       flex:1;
@@ -171,10 +172,10 @@
   }
   .btntext {
     float: right;
-    margin: 11px 9px 0 0;
+    /* margin: 11px 9px 0 0; */
     align-items: center;
     color: --white;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.3px;
     
     -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
@@ -495,7 +496,9 @@
   .glowingbtn{
     font-size: 1em;
   }
+
 }
+
 
     
     

@@ -1,0 +1,158 @@
+.lhs{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/shopoholic-138fd.appspot.com/o/495%20nn.jpg?alt=media&token=1a2b722b-c4b0-42c4-9f9d-e64c48e71968"),url("https://upload.wikimedia.org/wikipedia/commons/d/d2/Solid_white.png") ;
+    background-size: 1000px   ;
+   
+    background-blend-mode:multiply ;
+}
+.img1{
+    height:650px;
+    margin-top: 75px;
+}
+.restimages{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 210px;
+    opacity: override;
+}
+.rhs{
+    padding-top:10px ;
+}
+.heading{
+    position: relative;
+    width: 550px;
+    height: 56px;
+    left: 603px;
+    top: 273px;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 39px;
+    
+    color: #000000;
+}
+.price{
+
+position: relative;
+width: 550px;
+height: 34px;
+left: 303px;
+top: 299px;
+text-align:right;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 300;
+font-size: 32px;
+line-height: 27px;
+
+color: #000000;
+}
+
+
+.description{
+    position: relative;
+    left: 303px;
+    top: 299px;
+    text-align:right;
+    overflow-wrap:break-word;
+    width: 550px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 22px;
+
+    color: #000000;
+    
+
+}
+
+
+
+
+
+.btn1,.btn2{
+/* Rectangle 17 */
+margin-left: 10px;
+background-color: black;
+box-sizing: border-box;
+color: aliceblue;
+left: 440px;
+right: 0%;
+height: 79px;
+width: 396px;
+top: 333px;
+bottom: 9.52%;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+position: relative;
+color: #FFFFFF;
+background: #000000;
+border: 1px solid #000000;
+}
+.btn1:hover,.btn2:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: all 0.5s ease-in-out;
+}
+.btns{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0px;
+    width: 200px;
+    height: 200px;
+ 
+}
+
+.sizebtn{
+    width: 41px;
+    height: 41px;
+    position: relative;;
+    top: 300px;
+    left: 650px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+    background-color: black;
+}
+
+.sizebtn:hover{
+    width: 41px;
+    height: 41px;
+    position: relative;;
+    top: 300px;
+    left: 650px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    background-color: rgb(228, 0, 0);
+    transition: all 0.5s ease-in-out;
+    
+}
+
+
+
+button:disabled,
+    button[disabled] {
+        border: 1px dashed black;
+        background-color: rgb(255, 255, 255);
+        color: hsl(0, 0%, 75%);
+        
+        cursor: not-allowed;
+    }
+.size{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
