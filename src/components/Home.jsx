@@ -70,8 +70,8 @@ function Home () {
 
   querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
-    // console.log(doc.id, " => ", doc.data().titile); works
-
+   
+ // console.log(doc.id, " => ", doc.data().titile); works
    
   });
   // console.log(" => ", doc.data());
@@ -84,7 +84,7 @@ function Home () {
   // const q = query(collection(db, "products"));
   //, where("category", "==", "footwear"))
   const querySnapshot = await getDocs(q);
-  // console.log(q);
+  console.log(proRef);
   // console.log(doc.data());
   // console.log(querySnapshot.docs[0].data().titile);
   
@@ -127,12 +127,9 @@ function Home () {
   async function getcategory4() {
     const proRef = collection(db, "products");
     const q = query(proRef, where("category", "==", "personal care"));
-  // const q = query(collection(db, "products"));
-  //, where("category", "==", "footwear"))
+ 
   const querySnapshot = await getDocs(q);
-  // console.log(q);
-  // console.log(doc.data());
-  // console.log(querySnapshot.docs[0].data().titile);
+  
   
   const productsData = querySnapshot.docs.map((doc) => doc.data());
   setProducts4(productsData);
@@ -258,16 +255,18 @@ async function writeUserData(islogin) {
           <div className={ho.bannerDiv}>
       
             
-             <Carousel responsive={responsive1} autoPlay={true} autoPlaySpeed={3000} showDots={true} renderDotsOutside={true} infinite={true} rewindWithAnimation={true} dotListClass={ho.dotListClass} >
-             <Banner titile="50% off on all orders" 
-             url={Getimg ({imageName: "B (1).gif" }) } />
+             <Carousel responsive={responsive1} autoPlay={false} autoPlaySpeed={3000} showDots={true} renderDotsOutside={true} infinite={true} rewindWithAnimation={true} dotListClass={ho.dotListClass} >
+             {/* <Banner titile="50% off on all orders" 
+             url={Getimg ({imageName: "B (1).gif" }) } /> */}
+              <Banner titile="Free Home Delivery on first order"
+               url="https://github.com/ARJUN-SREEKUMAR/welcome-project/blob/main/B(4).gif?raw=true"/>
   
-              <Banner titile="Clearence sale" url={Getimg ({imageName: "B (2).gif" }) } />
+              <Banner titile="Clearence sale" url="https://github.com/ARJUN-SREEKUMAR/welcome-project/blob/main/B%20(1).gif?raw=true" />
   
-              <Banner titile="Offer closes soon"  url={Getimg ({imageName: "B (3)1.gif" }) }/>
+              <Banner titile="Offer closes soon"  url="https://github.com/ARJUN-SREEKUMAR/welcome-project/blob/main/B%20(2).gif?raw=true"/>
   
               <Banner titile="Free Home Delivery on first order"
-               url={Getimg ({imageName: "B(4).gif" }) }/>
+               url="https://github.com/ARJUN-SREEKUMAR/welcome-project/blob/main/B(4).gif?raw=true"/>
   </Carousel>
   <div className={ho.renderoutside}>
       &nbsp;
@@ -275,35 +274,35 @@ async function writeUserData(islogin) {
     
   
   <Carousel responsive={responsive2} autoPlay={false} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={false} rewindWithAnimation={true} draggable={true}>
-  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic-138fd.appspot.com/o/Work%20in%20progress.jpeg?alt=media&token=391faef2-9ecc-4dfa-98eb-c47edd0a28ea"/>
+  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic2-e4682.appspot.com/o/category_images%2Ffootwear.jpg?alt=media&token=f2a46183-863d-4626-8c9e-e721d0b9ada6"/>
   {products.map((item) => 
   <Card item={item}/> 
   )}
   
   </Carousel>
   <Carousel responsive={responsive2} autoPlay={false} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={false} rewindWithAnimation={true}>
-  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic-138fd.appspot.com/o/footwear.jpeg?alt=media&token=55ee165b-d2bb-4fc9-8ac5-f75412314b22"/>
+  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic2-e4682.appspot.com/o/category_images%2Ffootwear%20(1).jpeg?alt=media&token=677ea0ae-0434-44a2-b147-20dbfd2eb598"/>
   {products2.map((item) => 
   <Card item={item}/> 
   )}
   
   </Carousel>
   <Carousel responsive={responsive2} autoPlay={false} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={false} rewindWithAnimation={true}>
-  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic-138fd.appspot.com/o/electronics.png?alt=media&token=94c0068b-7af7-4319-bebd-9b2bd76a3513"/>
+  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic2-e4682.appspot.com/o/category_images%2Felectronics%20(1).png?alt=media&token=0c2dae9d-2b7a-4df0-97d6-b1a497249dd4"/>
   {products3.map((item) => 
   <Card item={item}/> 
   )}
   
   </Carousel>
   <Carousel responsive={responsive2} autoPlay={false} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={false} rewindWithAnimation={true}>
-  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic-138fd.appspot.com/o/personal%20care.jpeg?alt=media&token=e5fb4baf-8dcf-4436-a3dc-a3a90f97700a"/>
+  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic2-e4682.appspot.com/o/category_images%2Fpersonal%20care%20(1).jpeg?alt=media&token=60f9de72-cb21-475e-a03f-79592974cd02"/>
   {products4.map((item) => 
   <Card item={item}/> 
   )}
   
   </Carousel>
   <Carousel responsive={responsive2} autoPlay={false} partialVisible={true}  showDots={false}  infinite={false}  itemClass={ho.carouselcard} rewind={false} rewindWithAnimation={true}>
-  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic-138fd.appspot.com/o/dress.jpeg?alt=media&token=4968d0a8-1b1f-4fed-965a-a5c83e4982e5"/>
+  <Titilecard img="https://firebasestorage.googleapis.com/v0/b/shopoholic2-e4682.appspot.com/o/category_images%2Fdress%20(1).jpeg?alt=media&token=6471e8fb-b98c-446e-a492-82ed6d3548a9"/>
   {products5.map((item) => 
   <Card item={item}/> 
   )}

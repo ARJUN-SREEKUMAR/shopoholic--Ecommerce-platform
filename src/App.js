@@ -11,6 +11,7 @@ import { logincontext } from './components/global/contex';
 import Productview from './components/Productview';
 import Load from './components/Load';
 import PaymentComponent from './components/PaymentComponent';
+import MyOrders from './components/MyOrders';
 function App() {
   
   const [islogin, setislogin] = useState(false);
@@ -29,6 +30,9 @@ function App() {
                    <Route path="/cart" element={<Cart />} /> 
                   <Route path="/product" element={<Productview />} /> 
                   <Route path='/payment' element={<PaymentComponent />} />
+                  // route to  MyOrders.jsx
+                  <Route path='/myorders' element={<MyOrders/>} />
+                  <Route path="*" element={ <div style={{ backgroundColor: '#f7e4c8' , color: 'red' }}> <h1  >404 not found</h1></div>} />
                 </Routes> 
                 </BrowserRouter> 
       {/* </productcontext.Provider > */}

@@ -31,7 +31,7 @@ function Login() {
 
     event.preventDefault();
     
-    console.log(`Username: ${username}\nPassword: ${password}`);
+    // console.log(`Username: ${username}\nPassword: ${password}`);
 // alert("some thing fishy!!!")
     signInWithEmailAndPassword(auth, username, password)
   .then((userCredential) => {
