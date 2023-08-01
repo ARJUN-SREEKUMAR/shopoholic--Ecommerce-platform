@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopoholic--Ecommerce-platform/static/css/main.4a9f15c6.css",
-    "main.js": "/shopoholic--Ecommerce-platform/static/js/main.46e1ea47.js",
+    "main.js": "/shopoholic--Ecommerce-platform/static/js/main.c767bcee.js",
     "static/media/loginpic.png": "/shopoholic--Ecommerce-platform/static/media/loginpic.29cb1edf21ab822bf7a4.png",
     "static/media/signup.jpg": "/shopoholic--Ecommerce-platform/static/media/signup.1e88e5269036fd915bb5.jpg",
     "static/media/revicons.eot": "/shopoholic--Ecommerce-platform/static/media/revicons.a77de540a38981833f9e.eot",
@@ -9,10 +9,10 @@
     "static/media/revicons.woff": "/shopoholic--Ecommerce-platform/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/shopoholic--Ecommerce-platform/index.html",
     "main.4a9f15c6.css.map": "/shopoholic--Ecommerce-platform/static/css/main.4a9f15c6.css.map",
-    "main.46e1ea47.js.map": "/shopoholic--Ecommerce-platform/static/js/main.46e1ea47.js.map"
+    "main.c767bcee.js.map": "/shopoholic--Ecommerce-platform/static/js/main.c767bcee.js.map"
   },
   "entrypoints": [
     "static/css/main.4a9f15c6.css",
-    "static/js/main.46e1ea47.js"
+    "static/js/main.c767bcee.js"
   ]
 }
