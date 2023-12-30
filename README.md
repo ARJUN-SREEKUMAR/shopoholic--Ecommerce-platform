@@ -21,12 +21,39 @@ To get started with Shopoholc, you will need to:
 3. Install the dependencies
 4. Run the development server
 
+## Environment Configuration
+
+Shopoholic uses Firebase for backend services, and to set up your development environment, you'll need to create an environment configuration file with your Firebase API key.
+
+Follow these steps:
+
+1. In the root directory of the project, create a new file named `.env.local`.
+
+2. Open the `.env.local` file in a text editor.
+
+3. Add your Firebase configuration information, including your API key, like this:
+
+    ```env
+    REACT_APP_FIREBASE_API_KEY=your_api_key
+    REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+    REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+    REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+    REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+    REACT_APP_FIREBASE_APP_ID=your_app_id
+    ```
+
+   Replace `your_api_key`, `your_auth_domain`, etc., with your actual Firebase project details.
+
+4. Save the file.
+
+Now, your development environment is configured to work with Firebase services.
+
+
 ## Development
 
 Shopoholc is developed using the Create React App framework. This makes it easy to get started with development and to run the project locally.
 
 To run the development server, simply run the following command from the project root directory:
-
 
 npm start
 
